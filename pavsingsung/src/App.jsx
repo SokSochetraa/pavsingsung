@@ -10,7 +10,7 @@ const images = {
 
 function App() {
   const [playerChoice, setPlayerChoice] = useState("rock");
-  const [computerChoice, setComputerChoice] = useState("rock");
+  const [computerChoice, setComputerChoice] = useState("rockCom");
   const [result, setResult] = useState("");
   const [isRevealing, setIsRevealing] = useState(false);
   const [point, setPoint] = useState(0);
