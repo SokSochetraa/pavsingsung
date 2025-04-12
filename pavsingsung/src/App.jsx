@@ -79,8 +79,8 @@ function App() {
           <div className="w-[250px] max-w-xs h-[150px] md:h-[200px] flex justify-center items-center bg-[#1e1e1e] rounded-xl shadow">
             {computerChoice && (
               <img
-                className={`w-[100px] md:w-[150px] scale-y-[-1] ${
-                  computerChoice !== "rockCom" ? "rotate-[-90deg]" : "rotate-90"
+                className={`w-[100px] md:w-[150px] rotate-90  ${
+                  computerChoice !== "rockCom" ? "" : "scale-x-[-1]"
                 } ${isRevealing ? "animate-shake" : ""}`}
                 src={images[computerChoice]}
                 alt={computerChoice}
