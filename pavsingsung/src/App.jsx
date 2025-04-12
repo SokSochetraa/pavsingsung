@@ -79,7 +79,7 @@ function App() {
           <div className="w-[250px] max-w-xs h-[150px] md:h-[200px] flex justify-center items-center bg-[#1e1e1e] rounded-xl shadow">
             {computerChoice && (
               <img
-                className={`w-[100px] md:w-[150px] rotate-90 scale-y-[-1] ${
+                className={`w-[100px] md:w-[150px] rotate-90 scale-y-[1] ${
                   isRevealing ? "animate-shake" : ""
                 }`}
                 src={images[computerChoice]}
