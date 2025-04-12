@@ -53,7 +53,7 @@ function App() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center gap-8 p-8">
       <h2 className="text-center m-[35px] font-bungee text-7xl md:text-6xl">
-        Lg Pav Sing Sung!!
+        Lg Pav Sing Sung
       </h2>
 
       <div className="flex flex-col md:flex-row w-full max-w-5xl justify-between items-center gap-8 px-8">
@@ -95,7 +95,7 @@ function App() {
           <button
             key={option}
             onClick={() => play(option)}
-            className="w-[150px] h-[100px] bg-[#1e1e1e] rounded-lg shadow-md hover:scale-105 transition transform flex items-center justify-center disabled:opacity-50"
+            className="w-[150px] h-[100px] bg-[#1e1e1e] rounded-lg shadow-md border-[2.5px] border-transparent hover:border-[#cd1401] hover:scale-105 transition transform flex items-center justify-center disabled:opacity-50"
             disabled={isRevealing}
           >
             <img
