@@ -80,7 +80,7 @@ function App() {
             {computerChoice && (
               <img
                 className={`w-[100px] md:w-[150px] scale-y-[-1] ${
-                  computerChoice !== "rockCom" ? "rotate-[-90]" : "rotate-90"
+                  computerChoice !== "rockCom" ? "rotate-[-90deg]" : "rotate-90"
                 } ${isRevealing ? "animate-shake" : ""}`}
                 src={images[computerChoice]}
                 alt={computerChoice}
