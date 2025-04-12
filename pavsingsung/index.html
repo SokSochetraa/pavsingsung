@@ -1,12 +1,40 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
+    <title>Pav Sing Sung</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Bungee+Tint&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              bungee: ['"Bungee Spice"', "cursive"],
+              bungeetint: ['"Bungee Tint"', "cursive"],
+            },
+            animation: {
+              shake: "shake 0.5s ease-in-out 3",
+            },
+            keyframes: {
+              shake: {
+                "0%, 100%": { transform: "translateX(0)" },
+                "20%, 60%": { transform: "translateX(-10px)" },
+                "40%, 80%": { transform: "translateX(10px)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
   </head>
-  <body>
+  <body
+    class="flex flex-col item-center justify-center bg-[#121212] h-full w-full"
+  >
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
