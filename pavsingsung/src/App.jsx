@@ -49,8 +49,8 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center md:gap-8 mt-2">
-      <h2 className="text-center mb-4 font-bungee text-5xl md:text-7xl text-xl">
+    <div className="min-h-screen flex flex-col items-center justify-center md:gap-6 mt-2">
+      <h2 className="text-center mb-2 font-bungee text-5xl md:text-7xl text-xl">
         Lg Pav Sing Sung
       </h2>
 
@@ -107,7 +107,7 @@ function App() {
         ))}
       </div>
 
-      <div className="w-full flex flex-col items-center justify-center mt-2">
+      <div className="w-full flex flex-col items-center justify-center">
         <h4 className="font-bungee text-lg md:text-xl text-gray-600">
           Score: {point}
         </h4>
