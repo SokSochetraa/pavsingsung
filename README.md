@@ -17,7 +17,7 @@ A fun and responsive Rock-Paper-Scissors game built with **React.js** and **Tail
 
 ## 📸 Preview
 
-![preview](.pavsingsung/public/preview.png)
+![preview](./pavsingsung/public/preview.png)
 
 ---
 
