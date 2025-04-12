@@ -70,7 +70,7 @@ function App() {
           </div>
         </div>
 
-        <h4 className="w-full h-[58px] text-center font-bungee text-white text-4xl md:text-5xl">
+        <h4 className="w-full md:w-[200px] h-[58px] text-center font-bungee text-white text-4xl md:text-5xl">
           {!isRevealing && result}
         </h4>
 
