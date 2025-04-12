@@ -33,7 +33,7 @@ function App() {
         setPoint((prev) => prev - 1);
       }
       setIsRevealing(false);
-    }, 3000);
+    }, 1500);
   };
 
   const getResult = (player, computer) => {
