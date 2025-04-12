@@ -70,7 +70,7 @@ function App() {
           </div>
         </div>
 
-        <h4 className="w-full md:w-[200px] h-[58px] text-center font-bungee text-white text-4xl md:text-5xl">
+        <h4 className="w-full md:w-[300px] h-[58px] text-center font-bungee text-white text-4xl md:text-5xl">
           {!isRevealing && result}
         </h4>
 
@@ -79,7 +79,7 @@ function App() {
           <div className="w-[250px] max-w-xs h-[150px] md:h-[200px] flex justify-center items-center bg-[#1e1e1e] rounded-xl shadow">
             {computerChoice && (
               <img
-                className={`w-[100px] md:w-[150px] transform rotate-90 scale-y-[-1] transition-transform duration-300 ${
+                className={`w-[100px] md:w-[150px] transform rotate-90 scale-y-[1] transition-transform duration-300 ${
                   isRevealing ? "animate-shake" : ""
                 }`}
                 src={images[computerChoice]}
