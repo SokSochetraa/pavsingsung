@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const options = ["rock", "paper", "scissors"];
 const images = {
@@ -15,12 +15,40 @@ function App() {
   const [isRevealing, setIsRevealing] = useState(false);
   const [point, setPoint] = useState(0);
 
+  const bgMusicRef = useRef(null);
+  const shakeSoundRef = useRef(null);
+
+  useEffect(() => {
+    bgMusicRef.current = new Audio("/sounds/background.mp3");
+    bgMusicRef.current.loop = true;
+    bgMusicRef.current.volume = 0.1;
+
+    const playMusic = () => {
+      bgMusicRef.current
+        .play()
+        .catch((err) => console.log("Autoplay blocked", err));
+      window.removeEventListener("click", playMusic);
+    };
+
+    window.addEventListener("click", playMusic);
+
+    return () => {
+      bgMusicRef.current.pause();
+    };
+  }, []);
+
   const play = (choice) => {
     const computer = options[Math.floor(Math.random() * options.length)];
     setPlayerChoice("rock");
     setComputerChoice("rockCom");
     setResult("");
     setIsRevealing(true);
+
+    if (!shakeSoundRef.current) {
+      shakeSoundRef.current = new Audio("/sounds/shaking.mp3");
+    }
+    shakeSoundRef.current.currentTime = 0;
+    shakeSoundRef.current.play();
 
     setTimeout(() => {
       setPlayerChoice(choice);
@@ -33,7 +61,7 @@ function App() {
         setPoint((prev) => prev - 1);
       }
       setIsRevealing(false);
-    }, 2000);
+    }, 1500);
   };
 
   const getResult = (player, computer) => {
