@@ -33,7 +33,7 @@ function App() {
         setPoint((prev) => prev - 1);
       }
       setIsRevealing(false);
-    }, 3000);
+    }, 2000);
   };
 
   const getResult = (player, computer) => {
@@ -50,13 +50,15 @@ function App() {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center md:gap-6 mt-2">
-      <h2 className="text-center mb-2 font-bungee text-5xl md:text-7xl text-xl">
-        Lg Pav Sing Sung
+      <h2 className="text-[#FF4B33] text-center mb-2 font-bungee text-5xl md:text-7xl text-xl">
+        Lg Pav Sing Sung!!
       </h2>
 
       <div className="flex flex-col md:flex-row w-full max-w-5xl justify-between items-center gap-8 px-2">
         <div className="text-center flex flex-col items-center">
-          <h4 className="font-bungee text-2xl md:text-3xl md:mb-4">Player</h4>
+          <h4 className="font-bungee text-2xl md:text-3xl md:mb-4 text-[#FF4B33]">
+            Player
+          </h4>
           <div className="w-[250px] max-w-xs h-[150px] md:h-[200px] flex justify-center items-center bg-[#1e1e1e] rounded-xl shadow">
             {playerChoice && (
               <img
@@ -70,17 +72,19 @@ function App() {
           </div>
         </div>
 
-        <h4 className="w-full md:w-[300px] h-[58px] text-center font-bungee text-white text-4xl md:text-5xl">
+        <h4 className="w-full md:w-[300px] h-[58px] text-center font-bungee text-[#FF4B33] text-4xl md:text-5xl">
           {!isRevealing && result}
         </h4>
 
         <div className="text-center flex flex-col-reverse md:flex-col items-center">
-          <h4 className="font-bungee text-2xl md:text-3xl mb-4">Computer</h4>
+          <h4 className="font-bungee text-2xl md:text-3xl mb-4 text-[#FF4B33]">
+            Computer
+          </h4>
           <div className="w-[250px] max-w-xs h-[150px] md:h-[200px] flex justify-center items-center bg-[#1e1e1e] rounded-xl shadow">
             {computerChoice && (
               <img
                 className={`w-[100px] md:w-[150px] rotate-90 scale-y-[-1] ${
-                  computerChoice !== "rockCom" ? "" : "scale-x-[1]"
+                  computerChoice !== "rockCom" ? "" : "scale-x-[-1]"
                 } ${isRevealing ? "animate-shake" : ""}`}
                 src={images[computerChoice]}
                 alt={computerChoice}
@@ -108,7 +112,7 @@ function App() {
       </div>
 
       <div className="w-full flex flex-col items-center justify-center">
-        <h4 className="font-bungee text-lg md:text-xl text-gray-600">
+        <h4 className="font-bungee text-lg md:text-xl text-[#FF4B33]">
           Score: {point}
         </h4>
       </div>
